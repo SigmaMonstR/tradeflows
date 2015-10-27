@@ -129,7 +129,7 @@
  <script type="text/javascript"> 
     
     //Dimensions of frame
-    var w = 400,
+    var w = innerWidth,
         h = innerHeight;
 
     //Boolean for great circles calculation
@@ -257,10 +257,6 @@
           node.projection = node.coords ? projection(node.coords) : undefined;
           nodeDataByCode[node.Code] = node;
         });
-
-        
-  
-    
 
         data.flows_2.forEach(function(flow) {
           var o = nodeDataByCode[flow.Origin], co = o.coords, po = o.projection;
